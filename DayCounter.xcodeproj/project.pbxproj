@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B70CC8E194C77440045CE5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B70CC8D194C77440045CE5A /* Foundation.framework */; };
+		5B70CC90194C77440045CE5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B70CC8F194C77440045CE5A /* CoreGraphics.framework */; };
+		5B70CC92194C77440045CE5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B70CC91194C77440045CE5A /* UIKit.framework */; };
+		5B70CC98194C77440045CE5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B70CC96194C77440045CE5A /* InfoPlist.strings */; };
+		5B70CC9A194C77440045CE5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CC99194C77440045CE5A /* main.m */; };
+		5B70CC9E194C77440045CE5A /* CGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CC9D194C77440045CE5A /* CGAppDelegate.m */; };
+		5B70CCA1194C77440045CE5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B70CC9F194C77440045CE5A /* Main.storyboard */; };
+		5B70CCA4194C77440045CE5A /* CGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CCA3194C77440045CE5A /* CGViewController.m */; };
+		5B70CCA6194C77440045CE5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B70CCA5194C77440045CE5A /* Images.xcassets */; };
+		5B70CCAD194C77440045CE5A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B70CCAC194C77440045CE5A /* XCTest.framework */; };
+		5B70CCAE194C77440045CE5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B70CC8D194C77440045CE5A /* Foundation.framework */; };
+		5B70CCAF194C77440045CE5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B70CC91194C77440045CE5A /* UIKit.framework */; };
+		5B70CCB7194C77440045CE5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B70CCB5194C77440045CE5A /* InfoPlist.strings */; };
+		5B70CCB9194C77440045CE5A /* DayCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CCB8194C77440045CE5A /* DayCounterTests.m */; };
+		5B70CCC7194C7CCE0045CE5A /* CGCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CCC6194C7CCE0045CE5A /* CGCounter.m */; };
+		5B70CCCA194C809D0045CE5A /* CGTaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CCC9194C809D0045CE5A /* CGTaskTableViewController.m */; };
+		5B70CCCD194C91340045CE5A /* CGAddCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CCCC194C91340045CE5A /* CGAddCounterViewController.m */; };
+		5B758724194CDD9200690C5E /* CGEditCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B758723194CDD9100690C5E /* CGEditCounterViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B70CCB0194C77440045CE5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B70CC82194C77430045CE5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B70CC89194C77440045CE5A;
+			remoteInfo = DayCounter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B70CC8A194C77440045CE5A /* DayCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B70CC8D194C77440045CE5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B70CC8F194C77440045CE5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5B70CC91194C77440045CE5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5B70CC95194C77440045CE5A /* DayCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayCounter-Info.plist"; sourceTree = "<group>"; };
+		5B70CC97194C77440045CE5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B70CC99194C77440045CE5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B70CC9B194C77440045CE5A /* DayCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DayCounter-Prefix.pch"; sourceTree = "<group>"; };
+		5B70CC9C194C77440045CE5A /* CGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGAppDelegate.h; sourceTree = "<group>"; };
+		5B70CC9D194C77440045CE5A /* CGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGAppDelegate.m; sourceTree = "<group>"; };
+		5B70CCA0194C77440045CE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B70CCA2194C77440045CE5A /* CGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGViewController.h; sourceTree = "<group>"; };
+		5B70CCA3194C77440045CE5A /* CGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGViewController.m; sourceTree = "<group>"; };
+		5B70CCA5194C77440045CE5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5B70CCAB194C77440045CE5A /* DayCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DayCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B70CCAC194C77440045CE5A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5B70CCB4194C77440045CE5A /* DayCounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DayCounterTests-Info.plist"; sourceTree = "<group>"; };
+		5B70CCB6194C77440045CE5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B70CCB8194C77440045CE5A /* DayCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DayCounterTests.m; sourceTree = "<group>"; };
+		5B70CCC5194C7CCE0045CE5A /* CGCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGCounter.h; path = ../CGCounter.h; sourceTree = "<group>"; };
+		5B70CCC6194C7CCE0045CE5A /* CGCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CGCounter.m; path = ../CGCounter.m; sourceTree = "<group>"; };
+		5B70CCC8194C809D0045CE5A /* CGTaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGTaskTableViewController.h; sourceTree = "<group>"; };
+		5B70CCC9194C809D0045CE5A /* CGTaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGTaskTableViewController.m; sourceTree = "<group>"; };
+		5B70CCCB194C91340045CE5A /* CGAddCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGAddCounterViewController.h; sourceTree = "<group>"; };
+		5B70CCCC194C91340045CE5A /* CGAddCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGAddCounterViewController.m; sourceTree = "<group>"; };
+		5B758722194CDD9100690C5E /* CGEditCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGEditCounterViewController.h; path = ../CGEditCounterViewController.h; sourceTree = "<group>"; };
+		5B758723194CDD9100690C5E /* CGEditCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CGEditCounterViewController.m; path = ../CGEditCounterViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B70CC87194C77440045CE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B70CC90194C77440045CE5A /* CoreGraphics.framework in Frameworks */,
+				5B70CC92194C77440045CE5A /* UIKit.framework in Frameworks */,
+				5B70CC8E194C77440045CE5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B70CCA8194C77440045CE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B70CCAD194C77440045CE5A /* XCTest.framework in Frameworks */,
+				5B70CCAF194C77440045CE5A /* UIKit.framework in Frameworks */,
+				5B70CCAE194C77440045CE5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B70CC81194C77430045CE5A = {
+			isa = PBXGroup;
+			children = (
+				5B70CC93194C77440045CE5A /* DayCounter */,
+				5B70CCB2194C77440045CE5A /* DayCounterTests */,
+				5B70CC8C194C77440045CE5A /* Frameworks */,
+				5B70CC8B194C77440045CE5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B70CC8B194C77440045CE5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B70CC8A194C77440045CE5A /* DayCounter.app */,
+				5B70CCAB194C77440045CE5A /* DayCounterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B70CC8C194C77440045CE5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B70CC8D194C77440045CE5A /* Foundation.framework */,
+				5B70CC8F194C77440045CE5A /* CoreGraphics.framework */,
+				5B70CC91194C77440045CE5A /* UIKit.framework */,
+				5B70CCAC194C77440045CE5A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B70CC93194C77440045CE5A /* DayCounter */ = {
+			isa = PBXGroup;
+			children = (
+				5B70CC9C194C77440045CE5A /* CGAppDelegate.h */,
+				5B70CC9D194C77440045CE5A /* CGAppDelegate.m */,
+				5B70CC9F194C77440045CE5A /* Main.storyboard */,
+				5B70CCA2194C77440045CE5A /* CGViewController.h */,
+				5B70CCA3194C77440045CE5A /* CGViewController.m */,
+				5B70CCA5194C77440045CE5A /* Images.xcassets */,
+				5B70CCC5194C7CCE0045CE5A /* CGCounter.h */,
+				5B70CCC6194C7CCE0045CE5A /* CGCounter.m */,
+				5B70CCC8194C809D0045CE5A /* CGTaskTableViewController.h */,
+				5B70CCC9194C809D0045CE5A /* CGTaskTableViewController.m */,
+				5B70CCCB194C91340045CE5A /* CGAddCounterViewController.h */,
+				5B70CCCC194C91340045CE5A /* CGAddCounterViewController.m */,
+				5B758722194CDD9100690C5E /* CGEditCounterViewController.h */,
+				5B758723194CDD9100690C5E /* CGEditCounterViewController.m */,
+				5B70CC94194C77440045CE5A /* Supporting Files */,
+			);
+			path = DayCounter;
+			sourceTree = "<group>";
+		};
+		5B70CC94194C77440045CE5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B70CC95194C77440045CE5A /* DayCounter-Info.plist */,
+				5B70CC96194C77440045CE5A /* InfoPlist.strings */,
+				5B70CC99194C77440045CE5A /* main.m */,
+				5B70CC9B194C77440045CE5A /* DayCounter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B70CCB2194C77440045CE5A /* DayCounterTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B70CCB8194C77440045CE5A /* DayCounterTests.m */,
+				5B70CCB3194C77440045CE5A /* Supporting Files */,
+			);
+			path = DayCounterTests;
+			sourceTree = "<group>";
+		};
+		5B70CCB3194C77440045CE5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B70CCB4194C77440045CE5A /* DayCounterTests-Info.plist */,
+				5B70CCB5194C77440045CE5A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B70CC89194C77440045CE5A /* DayCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B70CCBC194C77440045CE5A /* Build configuration list for PBXNativeTarget "DayCounter" */;
+			buildPhases = (
+				5B70CC86194C77440045CE5A /* Sources */,
+				5B70CC87194C77440045CE5A /* Frameworks */,
+				5B70CC88194C77440045CE5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DayCounter;
+			productName = DayCounter;
+			productReference = 5B70CC8A194C77440045CE5A /* DayCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B70CCAA194C77440045CE5A /* DayCounterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B70CCBF194C77440045CE5A /* Build configuration list for PBXNativeTarget "DayCounterTests" */;
+			buildPhases = (
+				5B70CCA7194C77440045CE5A /* Sources */,
+				5B70CCA8194C77440045CE5A /* Frameworks */,
+				5B70CCA9194C77440045CE5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B70CCB1194C77440045CE5A /* PBXTargetDependency */,
+			);
+			name = DayCounterTests;
+			productName = DayCounterTests;
+			productReference = 5B70CCAB194C77440045CE5A /* DayCounterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B70CC82194C77430045CE5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Puriphan Sawutudomphon";
+				TargetAttributes = {
+					5B70CCAA194C77440045CE5A = {
+						TestTargetID = 5B70CC89194C77440045CE5A;
+					};
+				};
+			};
+			buildConfigurationList = 5B70CC85194C77430045CE5A /* Build configuration list for PBXProject "DayCounter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B70CC81194C77430045CE5A;
+			productRefGroup = 5B70CC8B194C77440045CE5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B70CC89194C77440045CE5A /* DayCounter */,
+				5B70CCAA194C77440045CE5A /* DayCounterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B70CC88194C77440045CE5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B70CCA6194C77440045CE5A /* Images.xcassets in Resources */,
+				5B70CC98194C77440045CE5A /* InfoPlist.strings in Resources */,
+				5B70CCA1194C77440045CE5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B70CCA9194C77440045CE5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B70CCB7194C77440045CE5A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B70CC86194C77440045CE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B70CCC7194C7CCE0045CE5A /* CGCounter.m in Sources */,
+				5B758724194CDD9200690C5E /* CGEditCounterViewController.m in Sources */,
+				5B70CCCD194C91340045CE5A /* CGAddCounterViewController.m in Sources */,
+				5B70CC9E194C77440045CE5A /* CGAppDelegate.m in Sources */,
+				5B70CC9A194C77440045CE5A /* main.m in Sources */,
+				5B70CCA4194C77440045CE5A /* CGViewController.m in Sources */,
+				5B70CCCA194C809D0045CE5A /* CGTaskTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B70CCA7194C77440045CE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B70CCB9194C77440045CE5A /* DayCounterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B70CCB1194C77440045CE5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B70CC89194C77440045CE5A /* DayCounter */;
+			targetProxy = 5B70CCB0194C77440045CE5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B70CC96194C77440045CE5A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B70CC97194C77440045CE5A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B70CC9F194C77440045CE5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B70CCA0194C77440045CE5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B70CCB5194C77440045CE5A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B70CCB6194C77440045CE5A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B70CCBA194C77440045CE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B70CCBB194C77440045CE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B70CCBD194C77440045CE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayCounter/DayCounter-Prefix.pch";
+				INFOPLIST_FILE = "DayCounter/DayCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B70CCBE194C77440045CE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayCounter/DayCounter-Prefix.pch";
+				INFOPLIST_FILE = "DayCounter/DayCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5B70CCC0194C77440045CE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DayCounter.app/DayCounter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayCounter/DayCounter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DayCounterTests/DayCounterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5B70CCC1194C77440045CE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DayCounter.app/DayCounter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DayCounter/DayCounter-Prefix.pch";
+				INFOPLIST_FILE = "DayCounterTests/DayCounterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B70CC85194C77430045CE5A /* Build configuration list for PBXProject "DayCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B70CCBA194C77440045CE5A /* Debug */,
+				5B70CCBB194C77440045CE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B70CCBC194C77440045CE5A /* Build configuration list for PBXNativeTarget "DayCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B70CCBD194C77440045CE5A /* Debug */,
+				5B70CCBE194C77440045CE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B70CCBF194C77440045CE5A /* Build configuration list for PBXNativeTarget "DayCounterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B70CCC0194C77440045CE5A /* Debug */,
+				5B70CCC1194C77440045CE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B70CC82194C77430045CE5A /* Project object */;
+}
