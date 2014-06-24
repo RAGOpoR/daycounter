@@ -50,11 +50,11 @@
     UIDatePicker *dp = [[UIDatePicker alloc]init];
     [dp setDatePickerMode:UIDatePickerModeDate];
     [dp addTarget:self action:@selector(datePickerCallback) forControlEvents:UIControlEventValueChanged];
-    
     _inputDate.inputView = dp;
+    
     UIDatePicker *tp = [[UIDatePicker alloc]init];
     [tp setDatePickerMode:UIDatePickerModeTime];
-    [tp addTarget:self action:@selector(datePickerCallback) forControlEvents:UIControlEventValueChanged];
+    [tp addTarget:self action:@selector(timePickerCallback) forControlEvents:UIControlEventValueChanged];
     _inputTime.inputView = tp;
 }
 
@@ -87,9 +87,14 @@
 
 }
 
-- (void)datePickerCallback {
-    NSLog(@"value change");
-    
+- (void)datePickerCallback
+{
+    _inputDate.text = @"date";
+}
+
+- (void)timePickerCallback
+{
+    _inputTime.text = @"time";
 }
 
 #pragma mark PickerView DataSource
