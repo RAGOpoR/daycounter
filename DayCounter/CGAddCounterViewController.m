@@ -45,7 +45,7 @@
     NSDateFormatter *dataFormatD = [[NSDateFormatter alloc] init];
     [dataFormatD setDateFormat:@"dd-MM-YYYY"];
     NSDateFormatter *dataFormatT = [[NSDateFormatter alloc] init];
-    [dataFormatT setDateFormat:@"HH-mm"];
+    [dataFormatT setDateFormat:@"HH-mm-ss"];
     
     UIDatePicker *dp = [[UIDatePicker alloc]init];
     [dp setDatePickerMode:UIDatePickerModeDate];
