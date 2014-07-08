@@ -22,7 +22,6 @@
 
 @synthesize counterListViewController = _counterListViewController;
 
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -42,10 +41,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    /*
     NSDateFormatter *dataFormatD = [[NSDateFormatter alloc] init];
     [dataFormatD setDateFormat:@"dd-MM-YYYY"];
     NSDateFormatter *dataFormatT = [[NSDateFormatter alloc] init];
     [dataFormatT setDateFormat:@"HH-mm-ss"];
+    */
     
     UIDatePicker *dp = [[UIDatePicker alloc]init];
     [dp setDatePickerMode:UIDatePickerModeDate];
@@ -89,12 +91,21 @@
 
 - (void)datePickerCallback
 {
-    _inputDate.text = @"date";
+    NSDateFormatter *formatterDate = [[NSDateFormatter alloc]init];
+    [formatterDate setDateFormat:@"dd  MMMM  yyyy"];
+    _inputDate.text = [formatterDate stringFromDate:[NSDate date]];
+    
+    
+    //_inputDate.text = @"date";
 }
 
 - (void)timePickerCallback
 {
-    _inputTime.text = @"time";
+    NSDateFormatter *formatterTime = [[NSDateFormatter alloc]init];
+    [formatterTime setDateFormat:@"HH:mm:ss"];
+    _inputTime.text = [formatterTime stringFromDate:[NSDate date]];
+    
+    //_inputTime.text = @"time";
 }
 
 #pragma mark PickerView DataSource
