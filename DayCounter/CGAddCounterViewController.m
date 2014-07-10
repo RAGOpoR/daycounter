@@ -17,8 +17,11 @@
 @implementation CGAddCounterViewController
 
 @synthesize descField = _descField;
-@synthesize inputDate = _inputDate;
-@synthesize inputTime = _inputTime;
+@synthesize dateTextField = _dateTextField;
+@synthesize timeTextField = _timeTextField;
+
+@synthesize inputDate;
+@synthesize inputTime;
 
 @synthesize counterListViewController = _counterListViewController;
 
@@ -52,12 +55,12 @@
     UIDatePicker *dp = [[UIDatePicker alloc]init];
     [dp setDatePickerMode:UIDatePickerModeDate];
     [dp addTarget:self action:@selector(datePickerCallback) forControlEvents:UIControlEventValueChanged];
-    _inputDate.inputView = dp;
+    _dateTextField.inputView = dp;
     
     UIDatePicker *tp = [[UIDatePicker alloc]init];
     [tp setDatePickerMode:UIDatePickerModeTime];
     [tp addTarget:self action:@selector(timePickerCallback) forControlEvents:UIControlEventValueChanged];
-    _inputTime.inputView = tp;
+    _timeTextField.inputView = tp;
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,8 +96,7 @@
 {
     NSDateFormatter *formatterDate = [[NSDateFormatter alloc]init];
     [formatterDate setDateFormat:@"dd  MMMM  yyyy"];
-    _inputDate.text = [formatterDate stringFromDate:[NSDate date]];
-    
+    _dateTextField.text = [formatterDate stringFromDate:[NSDate date]];
     
     //_inputDate.text = @"date";
 }
@@ -103,7 +105,7 @@
 {
     NSDateFormatter *formatterTime = [[NSDateFormatter alloc]init];
     [formatterTime setDateFormat:@"HH:mm:ss"];
-    _inputTime.text = [formatterTime stringFromDate:[NSDate date]];
+    _timeTextField.text = [formatterTime stringFromDate:[NSDate date]];
     
     //_inputTime.text = @"time";
 }

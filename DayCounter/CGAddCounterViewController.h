@@ -10,7 +10,13 @@
 
 @class CGTaskTableViewController;
 
-@interface CGAddCounterViewController : UITableViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface CGAddCounterViewController : UITableViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
+{
+    NSDate *inputDate;
+    NSDate *inputTime;
+    
+    UIActionSheet *dateSheet;
+}
 
 - (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 
@@ -18,12 +24,16 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *descField;
 
-@property (nonatomic, strong) CGTaskTableViewController * counterListViewController;
+@property (strong, nonatomic) CGTaskTableViewController * counterListViewController;
 
-@property (strong, nonatomic) IBOutlet UITextField *inputDate;
+@property (strong, nonatomic) IBOutlet UITextField *dateTextField;
 
-@property (strong, nonatomic) IBOutlet UITextField *inputTime;
+@property (strong, nonatomic) IBOutlet UITextField *timeTextField;
 
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+
+@property (retain, nonatomic) NSDate *inputDate;
+
+@property (retain, nonatomic) NSDate *inputTime;
 
 @end
