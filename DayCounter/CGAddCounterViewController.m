@@ -94,19 +94,97 @@
 
 - (void)datePickerCallback
 {
-    NSDateFormatter *formatterDate = [[NSDateFormatter alloc]init];
-    [formatterDate setDateFormat:@"dd  MMMM  yyyy"];
-    _dateTextField.text = [formatterDate stringFromDate:[NSDate date]];
+    NSArray *listOfView = [dateSheet subviews];
+    for (UIView *subview in listOfView)
+    {
+        if ([subview isKindOfClass:[UIDatePicker class]])
+        {
+            self.inputDate = [(UIDatePicker *)subview date];
+        }
+    }
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    
+    [dateFormatter setDateFormat:@"dd / mm / YYYY"];
+    
+    [_dateTextField setText:[dateFormatter stringFromDate:self.inputDate]];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit ;
+    
+    NSDateComponents *ageCalc = [calendar components:unitFlags
+                                            fromDate:self.inputDate
+                                              toDate:[NSDate date]
+                                             options:0];
+    int days = [ageCalc day];
+    int mouths = [ageCalc month];
+    int years = [ageCalc year];
+    
+    /*
+    if (years < 0 || mouths < 0 || days < 0)
+    {
+        [self.ageLabel setText:@"Not Born Yet"];
+    }
+    else if(years == 0 && mouths == 0 && days ==0)
+    {
+        [self.ageLabel setText:@"Todaay is birthday"];
+    }
+    else
+    {
+        NSString *output = [NSString stringWithFormat:@"%i years %i mouths %i days",years,mouths,days];
+        [self.ageLabel setText:output];
+    }
+    */
+    
+    NSString *output = [NSString stringWithFormat:@"%i years %i mouths %i days",years,mouths,days];
+    [self.dateTextField setText:output];
+    [dateSheet dismissWithClickedButtonIndex:0 animated:YES];
+    
+    //NSDateFormatter *formatterDate = [[NSDateFormatter alloc]init];
+    //[formatterDate setDateFormat:@"dd  MMMM  yyyy"];
+    //_dateTextField.text = [formatterDate stringFromDate:[NSDate date]];
     //_inputDate.text = @"date";
 }
 
 - (void)timePickerCallback
 {
-    NSDateFormatter *formatterTime = [[NSDateFormatter alloc]init];
-    [formatterTime setDateFormat:@"HH:mm:ss"];
-    _timeTextField.text = [formatterTime stringFromDate:[NSDate date]];
+    NSArray *listOfView = [dateSheet subviews];
+    for (UIView *subview in listOfView)
+    {
+        if ([subview isKindOfClass:[UIDatePicker class]])
+        {
+            self.inputTime = [(UIDatePicker *)subview date];
+        }
+    }
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    
+    [dateFormatter setDateFormat:@"dd / mm / YYYY"];
+    
+    [_timeTextField setText:[dateFormatter stringFromDate:self.inputTime]];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    unsigned unitFlags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ;
+    
+    NSDateComponents *ageCalc = [calendar components:unitFlags
+                                            fromDate:self.inputDate
+                                              toDate:[NSDate date]
+                                             options:0];
+
+    int hours = [ageCalc hour];
+    int minutes = [ageCalc minute];
+    int second = [ageCalc second];
+    
+    NSString *output = [NSString stringWithFormat:@"%i hours %i minutes %i second",hours,minutes,second];
+    [self.timeTextField setText:output];
+    [dateSheet dismissWithClickedButtonIndex:0 animated:YES];
+
+    
+    //NSDateFormatter *formatterTime = [[NSDateFormatter alloc]init];
+    //[formatterTime setDateFormat:@"HH:mm:ss"];
+    //_timeTextField.text = [formatterTime stringFromDate:[NSDate date]];
     //_inputTime.text = @"time";
 }
 
