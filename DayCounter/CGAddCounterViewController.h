@@ -36,4 +36,6 @@
 
 @property (retain, nonatomic) NSDate *inputTime;
 
+@property (strong, nonatomic) IBOutlet UILabel *toDay;
+
 @end

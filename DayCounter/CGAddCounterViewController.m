@@ -52,15 +52,31 @@
     [dataFormatT setDateFormat:@"HH-mm-ss"];
     */
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"dd / MMMM / YYYY            HH:mm:ss "];
+    [_toDay setText:[dateFormatter stringFromDate:[NSDate date]]];
+    
+    dateSheet = [[UIActionSheet alloc]initWithTitle:nil
+                                           delegate:nil
+                                  cancelButtonTitle:nil
+                             destructiveButtonTitle:nil
+                                  otherButtonTitles:nil];
+    
+    [dateSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
     UIDatePicker *dp = [[UIDatePicker alloc]init];
     [dp setDatePickerMode:UIDatePickerModeDate];
     [dp addTarget:self action:@selector(datePickerCallback) forControlEvents:UIControlEventValueChanged];
     _dateTextField.inputView = dp;
+    [dateSheet addSubview:dp];
+
     
     UIDatePicker *tp = [[UIDatePicker alloc]init];
     [tp setDatePickerMode:UIDatePickerModeTime];
     [tp addTarget:self action:@selector(timePickerCallback) forControlEvents:UIControlEventValueChanged];
     _timeTextField.inputView = tp;
+    [dateSheet addSubview:tp];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,7 +121,7 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     
-    [dateFormatter setDateFormat:@"dd / mm / YYYY"];
+    [dateFormatter setDateFormat:@"dd / MM / YYYY"];
     
     [_dateTextField setText:[dateFormatter stringFromDate:self.inputDate]];
     
@@ -160,7 +176,7 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     
-    [dateFormatter setDateFormat:@"dd / mm / YYYY"];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
     
     [_timeTextField setText:[dateFormatter stringFromDate:self.inputTime]];
     
@@ -169,7 +185,7 @@
     unsigned unitFlags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ;
     
     NSDateComponents *ageCalc = [calendar components:unitFlags
-                                            fromDate:self.inputDate
+                                            fromDate:self.inputTime
                                               toDate:[NSDate date]
                                              options:0];
 
