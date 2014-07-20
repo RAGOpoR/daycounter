@@ -127,15 +127,32 @@
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit ;
+    unsigned unitFlagsDate = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit ;
     
-    NSDateComponents *ageCalc = [calendar components:unitFlags
-                                            fromDate:self.inputDate
-                                              toDate:[NSDate date]
-                                             options:0];
-    int days = [ageCalc day];
-    int mouths = [ageCalc month];
-    int years = [ageCalc year];
+    NSString *outputDate;
+    
+    NSDateComponents *ageCalcDate;
+    
+    int days = [ageCalcDate day];
+    int mouths = [ageCalcDate month];
+    int years = [ageCalcDate year];
+    
+    if (self.inputDate <= [NSDate date])
+    {
+        ageCalcDate = [calendar components:unitFlagsDate
+                              fromDate:self.inputTime
+                                toDate:[NSDate date]
+                               options:0];
+        outputDate = [NSString stringWithFormat:@"past %i years %i mouths %i days",years,mouths,days];
+    }
+    else
+    {
+        ageCalcDate = [calendar components:unitFlagsDate
+                              fromDate:[NSDate date]
+                                toDate:self.inputTime
+                               options:0];
+        outputDate = [NSString stringWithFormat:@"future %i years %i mouths %i days",years,mouths,days];
+    }
     
     /*
     if (years < 0 || mouths < 0 || days < 0)
@@ -153,14 +170,15 @@
     }
     */
     
-    NSString *output = [NSString stringWithFormat:@"%i years %i mouths %i days",years,mouths,days];
-    [self.dateTextField setText:output];
+    [self.dateTextField setText:outputDate];
     [dateSheet dismissWithClickedButtonIndex:0 animated:YES];
     
-    //NSDateFormatter *formatterDate = [[NSDateFormatter alloc]init];
-    //[formatterDate setDateFormat:@"dd  MMMM  yyyy"];
-    //_dateTextField.text = [formatterDate stringFromDate:[NSDate date]];
-    //_inputDate.text = @"date";
+    /*
+    NSDateFormatter *formatterDate = [[NSDateFormatter alloc]init];
+    [formatterDate setDateFormat:@"dd  MMMM  yyyy"];
+    _dateTextField.text = [formatterDate stringFromDate:[NSDate date]];
+    _inputDate.text = @"date";
+     */
 }
 
 - (void)timePickerCallback
@@ -182,19 +200,34 @@
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    unsigned unitFlags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ;
+    unsigned unitFlagsTime = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ;
     
-    NSDateComponents *ageCalc = [calendar components:unitFlags
-                                            fromDate:self.inputTime
-                                              toDate:[NSDate date]
-                                             options:0];
+    NSString *outputTime;
+    
+    NSDateComponents *ageCalcTime;
+    
+    int hours = [ageCalcTime hour];
+    int minutes = [ageCalcTime minute];
+    int second = [ageCalcTime second];
+    
+    if (self.inputTime <= [NSDate date])
+    {
+         ageCalcTime = [calendar components:unitFlagsTime
+                                fromDate:self.inputTime
+                                  toDate:[NSDate date]
+                                 options:0];
+        outputTime = [NSString stringWithFormat:@"past %i hours %i minutes %i second",hours,minutes,second];
+    }
+    else
+    {
+         ageCalcTime = [calendar components:unitFlagsTime
+                                fromDate:[NSDate date]
+                                  toDate:self.inputTime
+                                 options:0];
+        outputTime = [NSString stringWithFormat:@"future %i hours %i minutes %i second",hours,minutes,second];
+    }
 
-    int hours = [ageCalc hour];
-    int minutes = [ageCalc minute];
-    int second = [ageCalc second];
-    
-    NSString *output = [NSString stringWithFormat:@"%i hours %i minutes %i second",hours,minutes,second];
-    [self.timeTextField setText:output];
+    [self.timeTextField setText:outputTime];
     [dateSheet dismissWithClickedButtonIndex:0 animated:YES];
 
     
