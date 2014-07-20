@@ -140,7 +140,7 @@
     if (self.inputDate <= [NSDate date])
     {
         ageCalcDate = [calendar components:unitFlagsDate
-                              fromDate:self.inputTime
+                              fromDate:self.inputDate
                                 toDate:[NSDate date]
                                options:0];
         outputDate = [NSString stringWithFormat:@"past %i years %i mouths %i days",years,mouths,days];
@@ -149,7 +149,7 @@
     {
         ageCalcDate = [calendar components:unitFlagsDate
                               fromDate:[NSDate date]
-                                toDate:self.inputTime
+                                toDate:self.inputDate
                                options:0];
         outputDate = [NSString stringWithFormat:@"future %i years %i mouths %i days",years,mouths,days];
     }
