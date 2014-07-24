@@ -12,4 +12,12 @@
 
 @property (nonatomic, strong) NSMutableArray *counters;
 
+/*
+@property (retain, nonatomic) IBOutlet UIImageView *bg;
+
+@property (strong, nonatomic) IBOutlet UILabel *displayLabel;
+
+- (IBAction)singleTapRecognized:(id)sender;
+*/
+
 @end

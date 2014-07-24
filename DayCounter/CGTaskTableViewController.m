@@ -43,14 +43,35 @@
     
     /*
     CGCounter *icounter = [[CGCounter alloc] initWithName:@"Interested" done:YES];
-    
     [self.counters addObject:icounter];
-    
     CGCounter *nicounter = [[CGCounter alloc]initWithName:@"Not Interested" done:NO];
-    
     [self.counters addObject:nicounter];
-    
     [self.tableView reloadData];
+     
+     NSMutableArray *imageArray = [[NSMutableArray alloc] initWithCapacity:IMAGE_COUNT];
+     
+     int i;
+     for (i=0; i<IMAGE_COUNT; ++i)
+     {
+     [imageArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"%d.png",i]]];
+     }
+     _bg.animationImages = [NSArray arrayWithArray:imageArray];
+     _bg.animationDuration = 1;
+     [_bg startAnimating];
+     
+     
+     UITapGestureRecognizer *singleTapGesture = [[UITapGestureRecognizer alloc] init];
+     [singleTapGesture addTarget:self action:@selector(singleTapRecognized:)];
+     singleTapGesture.delegate = self;
+     singleTapGesture.numberOfTapsRequired=1;
+     singleTapGesture.numberOfTouchesRequired=1;
+     singleTapGesture.cancelsTouchesInView=NO;
+     [[self view]addGestureRecognizer:singleTapGesture];
+     
+     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+     [dateFormatter setDateFormat:@"dd"];
+     [_displayLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+
      */
 }
 
@@ -139,6 +160,54 @@
     }   
 }
 
+/*
+int a=0;
+
+- (IBAction)singleTapRecognized:(id)sender
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    if (a!=4)
+    {
+        switch (a)
+        {
+            case 0:
+                [dateFormatter setDateFormat:@"MMMM"];
+                [self.displayLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+                [[self bg]setAnimationDuration : 1/10];
+                [_bg startAnimating];
+                break;
+            case 1:
+                [dateFormatter setDateFormat:@"YYYY"];
+                [self.displayLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+                [[self bg]setAnimationDuration : 10];
+                [_bg startAnimating];
+                break;
+            case 2:
+                [dateFormatter setDateFormat:@"dd MM YYYY  //  HH:mm:ss"];
+                [self.displayLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+                [[self bg]setAnimationDuration : 1/100];
+                [_bg startAnimating];
+                break;
+            case 3:
+                [dateFormatter setDateFormat:@"dd"];
+                [self.displayLabel setText:[dateFormatter stringFromDate:[NSDate date]]];
+                [[self bg]setAnimationDuration : 100];
+                [_bg startAnimating];
+                break;
+                
+            default:
+                break;
+        }
+        NSLog(@"%d",a);
+        ++a;
+        if (a==4)
+        {
+            a=0;
+        }
+    }
+    
+}
+*/
 
 /*
 // Override to support rearranging the table view.
